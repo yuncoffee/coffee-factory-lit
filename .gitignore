@@ -1,6 +1,10 @@
 /node_modules/
 /lib/
 /test/
+/dev-build/
+/dist/
+/docs/
+/docs-src/
 custom-elements.json
 # top level source
 my-element.js
