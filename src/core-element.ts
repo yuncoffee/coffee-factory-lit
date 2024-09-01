@@ -5,10 +5,13 @@
  */
 
 import "./components/sample"
+import "./components/lifecycle-tester"
 import { MyElement } from "./components/sample"
+import { LifecycleTester } from "./components/lifecycle-tester"
 
 declare global {
     interface HTMLElementTagNameMap {
         "my-element": MyElement
+        "lifecycle-tester": LifecycleTester
     }
 }
