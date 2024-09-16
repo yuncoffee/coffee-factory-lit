@@ -1,14 +1,7 @@
-export const FONT_LIST = [
-    "1000",
-    "900",
-    "800",
-    "700",
-    "600",
-    "500",
-    "400",
-    "300",
-    "200",
-    "100",
-] as const
+import { BUTTON_TYPES } from "../../../data/types/components/core/button"
 
-export type sFont = (typeof FONT_LIST)[number]
+export type ButtonType = (typeof BUTTON_TYPES)[number]
+
+export interface CFButton {
+    type: ButtonType
+}

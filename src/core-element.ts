@@ -8,10 +8,10 @@ import "./components/sample"
 import { MyElement } from "./components/sample"
 
 import "./components/core/cf-core"
-import { CfButton } from "./components/core/cf-core"
+import { CFButton } from "./components/core/cf-core"
 
 interface CFButtons {
-    "cf-button": CfButton
+    "cf-button": CFButton
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

@@ -8,7 +8,7 @@ export class StyleResetable extends LitElement {
 }
 
 @customElement("cf-element")
-export class CfElement extends StyleResetable {
+export class CFElement extends StyleResetable {
     override render() {
         return html`<slot></slot>`
     }

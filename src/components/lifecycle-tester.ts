@@ -54,7 +54,7 @@ export class LifecycleTester extends LitElement {
         this.isHide = !this.isHide
     }
 
-    handleHover = (event: MouseEvent) => {
+    handleHover = () => {
         this.isHover = !this.isHover
     }
 

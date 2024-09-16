@@ -1,6 +1,0 @@
-
-cf-button {
-    &:not(:defined) {
-        visibility: hidden;
-    }
-}

@@ -7,9 +7,19 @@
         <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
         <script src="../node_modules/lit/polyfill-support.js"></script>
         <script type="module" src="../dev-build/core-element.js"></script>
-        <link rel="stylesheet" href="../src/styles/common/reset.css" />
-        <link rel="stylesheet" href="../src/styles/common/variables.css" />
-        <link rel="stylesheet" href="../src/styles/common/pre-render.css" />
+        <link
+            rel="stylesheet"
+            as="style"
+            crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../src/styles/foundation/reset.css" />
+        <link rel="stylesheet" href="../src/styles/foundation/variables.css" />
+        <link rel="stylesheet" href="../src/styles/foundation/pre-render.css" />
         <link rel="stylesheet" href="../src/styles/styles.css" />
         <style>
             p {
@@ -24,9 +34,32 @@
         </style>
     </head>
     <body>
-        <cf-button onclick="{console.log(`hello`)}">Hello</cf-button>
-
-        <custom-button>HELLo</custom-button>
+        <cf-button onclick="{console.log(`hello`)}">
+            <text-system fontscale="body">HELLO WORLD</text-system>
+        </cf-button>
+        <text-system> HELLO WORLD </text-system>
+        <text-system>HELLO WORLD</text-system>
+        <cf-label fontscale="title">
+            <icon-remix slot="leading">whi whiwhi</icon-remix>
+            World is Hello
+        </cf-label>
+        <cf-label>
+            <icon-remix iconname="ri-corner-down-right-line" slot="leading"
+                >whi whiwhi</icon-remix
+            >
+            World is Hello
+        </cf-label>
+        <text-system fontscale="subTitle">What?</text-system>
+        <text-system fontscale="title">HELLO WORLD</text-system>
+        <text-system
+            fontscale="title"
+            fontsize="60px"
+            style="color: blue; background: red"
+            >HELLO WORLD</text-system
+        >
+        <custom-button>
+            <text-system>HELLO WORLD</text-system>
+        </custom-button>
         <my-element></my-element>
     </body>
 </html>

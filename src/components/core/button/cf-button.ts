@@ -1,13 +1,13 @@
 import { html } from "lit"
 import { customElement, property, state } from "lit/decorators.js"
-import { CfElement } from "../reset/cf-element"
+import { CFElement } from "../foundation/cf-element"
 import { cfButtonStyles } from "./cf-button.styles"
 
 // 어떻게 효과적으로 버튼을 렌더링 시킬까?
 // 버튼 타입별로 나누자!
 // filled, tonal, outlined, text
 @customElement("cf-button")
-export class CfButton extends CfElement {
+export class CFButton extends CFElement {
     static override get styles() {
         return [...super.styles, cfButtonStyles]
     }
