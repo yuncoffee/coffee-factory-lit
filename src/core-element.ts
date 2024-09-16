@@ -5,13 +5,20 @@
  */
 
 import "./components/sample"
-import "./components/lifecycle-tester"
 import { MyElement } from "./components/sample"
-import { LifecycleTester } from "./components/lifecycle-tester"
+
+import "./components/core/cf-core"
+import { CfButton } from "./components/core/cf-core"
+
+interface CFButtons {
+    "cf-button": CfButton
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface CFCore extends CFButtons {}
 
 declare global {
-    interface HTMLElementTagNameMap {
+    interface HTMLElementTagNameMap extends CFCore {
         "my-element": MyElement
-        "lifecycle-tester": LifecycleTester
     }
 }

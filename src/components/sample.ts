@@ -34,6 +34,7 @@ export class MyElement extends LitElement {
     override render() {
         return html`
             <h1>${this.sayHello(this.name)}!</h1>
+            <cf-button>Hello World!</cf-button>
             <button @click=${this._onClick} part="button">
                 Click Count: ${this.count}
             </button>

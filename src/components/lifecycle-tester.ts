@@ -1,5 +1,5 @@
 import { LitElement, PropertyValues, html, nothing } from "lit"
-import { customElement, property } from "lit/decorators.js"
+import { customElement, property, state } from "lit/decorators.js"
 
 @customElement("lifecycle-tester")
 export class LifecycleTester extends LitElement {
@@ -18,12 +18,16 @@ export class LifecycleTester extends LitElement {
         console.log("--- parrent disconnectedCallback called ---")
     }
 
-    override willUpdate(_changedProperties: PropertyValues) {
+    override willUpdate(changedProperties: PropertyValues) {
         console.log("--- parrent willUpdate called ---")
+        console.log(changedProperties)
     }
 
     @property({ type: Boolean })
     isHide = false
+
+    @state()
+    isHover = false
 
     override render() {
         console.log("--- parrent render called ---")
@@ -51,7 +55,7 @@ export class LifecycleTester extends LitElement {
     }
 
     handleHover = (event: MouseEvent) => {
-        console.log(event?.target)
+        this.isHover = !this.isHover
     }
 
     buttonTemplate = () => {
@@ -60,7 +64,7 @@ export class LifecycleTester extends LitElement {
             @mouseenter=${this.handleHover}
             @mouseleave=${this.handleHover}
         >
-            Toggle
+            ${this.isHover}
         </button>`
     }
 }
@@ -102,19 +106,6 @@ export class LifecycleTesterChild extends LitElement {
         }
     }
 
-    override disconnectedCallback() {
-        super.disconnectedCallback()
-        console.log("--- child disconnectedCallback called ---")
-    }
-
-    override firstUpdated() {
-        console.log("--- child first updated called ---")
-    }
-
-    override updated(changedProperties: PropertyValues<this>) {
-        console.log("--- child updated", changedProperties)
-    }
-
     override render() {
         console.log("--- child render called ---")
 
@@ -126,6 +117,19 @@ export class LifecycleTesterChild extends LitElement {
                 <button @click=${this.print}>print</button>
             </div>
         `
+    }
+
+    override firstUpdated() {
+        console.log("--- child first updated called ---")
+    }
+
+    override updated(changedProperties: PropertyValues<this>) {
+        console.log("--- child updated", changedProperties)
+    }
+
+    override disconnectedCallback() {
+        super.disconnectedCallback()
+        console.log("--- child disconnectedCallback called ---")
     }
 
     handleClick = () => {

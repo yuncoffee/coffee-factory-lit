@@ -42,6 +42,7 @@
     "author": "Coffee",
     "license": "BSD-3-Clause",
     "dependencies": {
+        "@lit-labs/ssr": "^3.2.2",
         "@lit/context": "^1.1.2",
         "@types/mocha": "^10.0.7",
         "lit": "^3.2.0",
