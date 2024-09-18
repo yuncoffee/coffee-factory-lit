@@ -35,7 +35,23 @@
     </head>
     <body>
         <cf-button onclick="{console.log(`hello`)}">
-            <text-system fontscale="body">HELLO WORLD</text-system>
+            <text-system fontscale="body" slot="custom"
+                >HELLO WORLD</text-system
+            >
+        </cf-button>
+        <cf-button>
+            <icon-remix
+                iconname="ri-corner-down-right-line"
+                slot="leading"
+            ></icon-remix>
+            Button
+        </cf-button>
+        <cf-button>
+            <icon-remix
+                iconname="ri-corner-down-right-line"
+                slot="leading"
+            ></icon-remix>
+            Button
         </cf-button>
         <text-system> HELLO WORLD </text-system>
         <text-system>HELLO WORLD</text-system>
