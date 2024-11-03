@@ -4,6 +4,13 @@ html {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+:root {
+    --ked-global-font-size: 16px;
+    --ked-global-font-weight: 500;
+    --ked-global-line-height: 1.5em;
+    --ked-global-letter-spacing: 0;
+}
+
 cf-button {
     &:not(:defined) {
         visibility: hidden;
